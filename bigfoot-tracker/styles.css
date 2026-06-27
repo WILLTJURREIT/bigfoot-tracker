@@ -1,0 +1,260 @@
+/* GLOBAL PAGE SETUP & BACKGROUND ============================================ */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "DynaPuff", system-ui, sans-serif;
+  background-color: #0a0a0a;
+  background: url("images/bigfoot.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* HEADER STYLING ============================================ */
+
+header {
+  background-color: #4acf82;
+  color: #0d0d0d;
+  height: 7rem;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 5em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  border-bottom: 13px solid rgb(4, 40, 2);
+  opacity: 75%;
+  box-shadow: rgba(19, 243, 53, 0.56) 0px 30px 80px 7px;
+}
+
+/* LEAFLET MAP CONTAINER ============================================ */
+
+#map {
+  height: 40vh;
+  width: 800px;
+  max-width: 90vw;
+  margin: 20px auto;
+  border: 13px solid rgb(1, 13, 0);
+  box-sizing: content-box;
+  box-shadow: rgba(19, 243, 53, 0.56) 0px 30px 80px 7px;
+  transition: 1s;
+}
+
+
+
+/* FOOTER STYLING ============================================ */
+
+footer {
+  text-align: center;
+  color: #262525;
+  font-size: 3em;
+  padding-bottom: 15px;
+  background-color: #4acf82;
+  border: 3px solid rgb(4, 40, 2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: bold;
+  opacity: 85%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* STATE FILTER DROPDOWN STYLING ============================================ */
+
+#states {
+  margin-bottom: 10px;
+}
+
+#states label {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+#states select {
+  background-color: #1f2937;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 10rem;
+  margin-left: 2.2rem;
+}
+
+#states select:hover {
+  background-color: #0663e4;
+  color: rgb(11, 11, 11);
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 10.3rem;
+  margin-left: 2.2rem;
+}
+
+/* DECADE FILTER DROPDOWN STYLING ============================================ */
+
+#selectDecade {
+  background-color: #1f2937;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+#year select {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 10rem;
+}
+#year select:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 10.3rem;
+  color: white;
+  background-color: #0663e4;
+}
+
+/* BUTTON STYLING ============================================ */
+
+.btn {
+  background-color: green;
+  padding: 1rem;
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition: 0.6s;
+  width: 10rem;
+}
+
+.btn:hover {
+  background-color: rgb(7, 239, 7);
+  padding: 1rem;
+  border-radius: 10px;
+  color: rgb(63, 63, 63);
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transition: 0.6s;
+  width: 11rem;
+}
+
+/* CONTROLS CONTAINER STYLING ============================================ */
+#controls {
+  text-align: center;
+  color: #262525;
+  font-size: 3em;
+  padding-bottom: 15px;
+  background-color: #4acf82;
+  border: 3px solid rgb(4, 40, 2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  max-width: 1200px;
+  opacity: 90%;
+  box-shadow: rgba(19, 243, 53, 0.56) 0px 30px 80px 7px;
+}
+
+/* RESPONSIVE DESIGN: MEDIA QUERIES ===================================================== */
+
+/*MEDIUM SCREENS ----------------------------------------------------- */
+@media (max-width: 1024px) {
+  header {
+    font-size: 3.5em;
+    height: 5.5rem;
+  }
+
+  #map {
+    width: 95%;
+    height: 50vh;
+  }
+
+  #controls {
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+    width: 95%;
+  }
+
+  .btn {
+    width: 9rem;
+    margin: 0.5rem;
+  }
+
+  footer {
+    font-size: 2em;
+    padding: 0.5rem;
+  }
+}
+
+/* SMALL SCREENS ----------------------------------------- */
+@media (max-width: 600px) {
+  header {
+    font-size: 2em;
+    height: auto;
+    padding: 1rem;
+  }
+
+  #map {
+    height: 45vh;
+    width: 100%;
+    border-width: 8px;
+  }
+
+  #controls {
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2em;
+    padding: 0.5rem;
+  }
+
+  #states select,
+  #selectDecade,
+  #year select {
+    width: 80%;
+    margin: 0.5rem auto;
+    display: block;
+  }
+
+  .btn {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 1.3em;
+    padding: 0.5rem;
+    border-width: 2px;
+  }
+}
